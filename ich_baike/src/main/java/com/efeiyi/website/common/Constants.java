@@ -17,6 +17,6 @@ public class Constants {
     // 删除文件格式
     public static final String DELETE_FORMAT = ".html";
     //UTF-8编码
-    public static final String ENCODE_UTF8 = "UTF-8";
+    public static final String ENCODE = "UTF-8";
 
 }

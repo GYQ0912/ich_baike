@@ -39,20 +39,14 @@ public class FreeMarker {
      * @throws Exception
      */
 
-    public void createHTML(Entity entity, String dataName, String templateName)
-            throws Exception {
-        try {
-            Method setIdMethod = entity.getClass().getMethod("getId");
-            String id = (String) setIdMethod.invoke(entity);
-            Map<String, Object> entityMap = new HashMap<String, Object>();
-            entityMap.put(dataName, entity);
-            String directory = Util.buildDirectory(id);// /9c/69/
-            createHTML(entityMap, templateName + Constants.TEMPLATE_FORMAT,
-                    Constants.CREATE_HTML_PATH + templateName + directory + id + Constants.CREATE_FORMAT);
-        } catch (Exception e) {
-            throw e;
-        }
-
+    public void createHtml(Entity entity, String dataName, String templateName) throws Exception {
+        Method setIdMethod = entity.getClass().getMethod("getId");
+        String id = (String) setIdMethod.invoke(entity);
+        Map<String, Object> entityMap = new HashMap<String, Object>();
+        entityMap.put(dataName, entity);
+        String directory = Util.buildDirectory(id);// /9c/69/
+        createHtml(entityMap, templateName + Constants.TEMPLATE_FORMAT,
+                Constants.CREATE_HTML_PATH + templateName + directory + id + Constants.CREATE_FORMAT);
     }
 
     /**
@@ -64,7 +58,7 @@ public class FreeMarker {
      * @param id
      * @throws Exception
      */
-    public void createHTML(List<Entity> entityList, String dataName,
+    public void createHtml(List<Entity> entityList, String dataName,
                            String templateName, String id) throws Exception {
         Map<String, Entity> entityListMap = new HashMap<String, Entity>();
         for(Entity entity:entityList){
@@ -74,16 +68,16 @@ public class FreeMarker {
         Map<String, Object> dataMap = new HashMap<String, Object>();
         dataMap.put(dataName, entityListMap);
         String directory = Util.buildDirectory(id);
-        createHTML(dataMap, templateName + Constants.TEMPLATE_FORMAT, Constants.CREATE_HTML_PATH
+        createHtml(dataMap, templateName + Constants.TEMPLATE_FORMAT, Constants.CREATE_HTML_PATH
                 + templateName + directory + id + Constants.CREATE_FORMAT);
     }
 
-    public void createHTML(HashMap<String, Entity> entityMap, String dataName,
+    public void createHtml(HashMap<String, Entity> entityMap, String dataName,
                            String templateName, String id) throws Exception {
         Map<String, Object> dataMap = new HashMap<String, Object>();
         dataMap.put(dataName, entityMap);
         String directory = Util.buildDirectory(id);
-        createHTML(dataMap, templateName + Constants.TEMPLATE_FORMAT, Constants.CREATE_HTML_PATH
+        createHtml(dataMap, templateName + Constants.TEMPLATE_FORMAT, Constants.CREATE_HTML_PATH
                 + templateName + directory + id + Constants.CREATE_FORMAT);
     }
 
@@ -102,19 +96,20 @@ public class FreeMarker {
      * @throws IOException
      * @throws TemplateException
      */
-    public void createHTML(Map<String, Object> data, String templateName, String htmlPath) throws Exception {
+    public void createHtml(Map<String, Object> data, String templateName, String htmlPath) throws Exception {
         Configuration freemarkerCfg = initCfg();
         freemarkerCfg.setDirectoryForTemplateLoading(new File(Constants.TEMPLATE_PATH));
         // 指定模版路径
-        Template template = freemarkerCfg.getTemplate(templateName, Constants.ENCODE_UTF8);
+        Template template = freemarkerCfg.getTemplate(templateName, Constants.ENCODE);
         // 静态页面路径
         File htmlFile = new File(htmlPath);
         if (!htmlFile.getParentFile().exists()) {
             htmlFile.getParentFile().mkdirs();
         }
-        Writer writer = new BufferedWriter(new OutputStreamWriter(
-                new FileOutputStream(htmlFile), Constants.ENCODE_UTF8));
+        Writer writer = null;
         try {
+            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(htmlFile),
+                    Constants.ENCODE));
             template.process(data, writer);
         } catch (Exception e) {
             throw e;
@@ -141,7 +136,7 @@ public class FreeMarker {
             freemarkerCfg = new Configuration(Configuration.VERSION_2_3_25);
             // 加载模版
             freemarkerCfg.setServletContextForTemplateLoading(servletContext, "/");
-            freemarkerCfg.setEncoding(Locale.getDefault(), Constants.ENCODE_UTF8);
+            freemarkerCfg.setEncoding(Locale.getDefault(), Constants.ENCODE);
             // 加载自定义标签
             //freemarkerCfg.setSharedVariable("dic", new DicDirective());
             //freemarkerCfg.setSharedVariable("city", new CityDirective());

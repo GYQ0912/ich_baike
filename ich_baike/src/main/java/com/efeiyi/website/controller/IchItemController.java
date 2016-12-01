@@ -25,7 +25,7 @@ public class IchItemController extends BaseController {
 
         FreeMarker freeMarker = new FreeMarker(request);
         try {
-            freeMarker.createHTML(ichItem, "ichItem", "template");
+            freeMarker.createHtml(ichItem, "ichItem", "template");
         } catch (Exception e) {
             e.printStackTrace();
         }
