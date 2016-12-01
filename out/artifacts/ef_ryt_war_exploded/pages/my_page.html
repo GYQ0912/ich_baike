@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+<title>我的页面</title>
+<link href="../scripts/css/semantic.min.css" rel="stylesheet">
+<link href="../scripts/css/layouts.css" rel="stylesheet">
+<link href="../scripts/css/my_page.css" rel="stylesheet">
+<script>
+window.onload=function(){
+    //获取手机分辨率宽度
+    var fontPer=parseFloat((document.body.clientWidth*0.625)/320*100)+'%';
+    document.getElementsByTagName('html')[0].style.fontSize=fontPer;
+}
+</script>
+</head>
+<body style="padding-top:44px;">
+<header class="header fixed bar">
+    <div class="ui t14"><span>木头人</span></div>
+</header>
+<!--//End--header-->
+
+<article class="my_page">
+    <div class="ui divided list">
+        <div class="item">
+            <a href="">
+                <img class="ui avatar image" width="39" height="39" src="../scripts/upload/img1.jpg">
+                <span class="content aligned">木头人</span>
+                <i class="angle right floated icon"></i>
+            </a>
+        </div>
+    </div>
+    <!--//ENd--用户头像-->
+    <div class="ui divided list">
+        <div class="item">
+            <a href="">
+                <i class="icons-order icon-home"></i>
+                <span class="content aligned">我的主页</span>
+                <i class="angle right floated icon"></i>
+            </a>
+        </div>
+    </div>
+    <!--//ENd--我的主页-->
+    <div class="ui divided list">
+        <div class="item">
+            <a href="">
+                <i class="icons-order icon-money"></i>
+                <span class="content aligned">钱包</span>
+                <i class="angle right floated icon"></i>
+            </a>
+        </div>
+        <div class="item">
+            <a href="">
+                <i class="icons-order icon-order"></i>
+                <span class="content aligned">拍卖订单</span>
+                <i class="angle right floated icon"></i>
+            </a>
+        </div>
+    </div>
+    <!--//ENd--钱包&拍卖订单-->
+    <div class="ui divided list">
+        <div class="item">
+            <a href="">
+                <i class="icons-order icon-feedback"></i>
+                <span class="content aligned">意见反馈</span>
+                <i class="angle right floated icon"></i>
+            </a>
+        </div>
+    </div>
+    <!--//ENd--意见反馈-->
+    <div class="ui divided list">
+        <div class="item">
+            <a href="">
+                <i class="icons-order icon-setup"></i>
+                <span class="content aligned">设置</span>
+                <i class="angle right floated icon"></i>
+            </a>
+        </div>
+    </div>
+    <!--//ENd--设置-->
+</article>
+
+</body>
+</html>

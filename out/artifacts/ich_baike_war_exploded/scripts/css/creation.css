@@ -1,0 +1,89 @@
+
+.creation {background:#fff!important;min-height:100%}
+.creation .ui.comments{padding:16px 0 16px 12px}
+.creation .ui.comments .comment {border-bottom: 1px solid #f5f5f5;padding-bottom: 14px}
+.creation .ui.comments .content {padding-right: 12px}
+.creation .ui.comments .avatar{font-size:16px;font-weight:bold;margin-top:0}
+.creation .ui.comments .author{font-weight:normal;font-size:12px;color:#000}
+.creation .ui.comments .text{margin-bottom:0}
+.creation .ui.comments .actions{height:21px;line-height:21px}
+.creation .ui.comments .actions a{color:rgba(0,0,0,1)}
+.creation .ui.comments .actions .date{color:#979797;float:left}
+.creation .ui.comments .actions .reply{width:14px;height:12px;background:#5184bc;float:right;margin-top:4px;position:relative}
+.creation .ui.comments .actions .reply .icon_reply:before,
+.creation .ui.comments .actions .reply .icon_reply:after{content:'';width:2px;height:2px;-webkit-border-radius:10px;border-radius:10px;background:#fff;float:left;margin-top:5px;margin-left:2px}
+.creation .ui.comments .actions .reply .icon_reply:before{margin-left:4px}
+.creation .ui.comments .actions .reply .caret{position:absolute;top:-6px;left:-8px}
+.creation .ui.comments .actions .reply .caret:before{color:#5184bc;font-size:9px}
+
+.creation .ui.comments .actions .list {margin-top:0;line-height:21px;float:right;margin-right:6px}
+.creation .ui.comments .actions .list .item{border-left:1px solid rgba(255,255,255,1);padding-left:10px!important;padding-right:10px!important;font-size:9px;font-weight:normal}
+.creation .ui.comments .actions .list>.item:first-child {border-left:none;padding-left:10px!important; padding-right:10px!important}
+.creation .ui.comments .actions .list .icons.discuzz {width:10px;height:9px;background-position:-51px -38px;position:relative;top:2px;margin-right:3px}
+
+.creation .ui.comments .ui.message {
+    background: #fafafa;
+    margin:0!important;
+    margin-top:4px!important;
+    padding:0!important;
+    box-shadow:0 0 0 1px rgba(34,36,38,0) inset,0 0 0 0 transparent;
+}
+.creation .ui.comments .ui.message .ui.line {
+    width:100%;
+    height:1px;
+    float: left;
+    background: #f2f2f2;
+}
+.creation .ui.comments .ui.message .list {
+    margin:0;
+    padding-top: 8px;
+    padding-bottom:8px;
+    border-top: 1px solid #fff;
+}
+.creation .ui.comments .ui.message .item {
+    padding-left:10px;
+}
+.creation .ui.comments .ui.message .item .content {
+    font-size:11px;
+    line-height:15px;
+}
+.creation .ui.comments .ui.message .feed{
+    margin: 0;
+}
+.creation .ui.comments .ui.message .feed .icon {
+    padding: 0;
+}
+.creation .ui.comments .ui.message .feed .heart:before{
+    color: #5184bc;
+}
+.creation .ui.comments .ui.message .feed .heart:before {
+    font-size:12px;
+    display: inline-block;
+    margin-top:4px;
+}
+.creation .ui.comments .ui.message .feed .content {
+    line-height:15px;
+    margin:6px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

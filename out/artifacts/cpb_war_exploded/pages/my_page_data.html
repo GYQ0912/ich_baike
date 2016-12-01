@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+<title>我的页面-个人资料</title>
+<link href="../scripts/css/semantic.min.css" rel="stylesheet">
+<link href="../scripts/css/layouts.css" rel="stylesheet">
+<link href="../scripts/css/my_page.css" rel="stylesheet">
+<script>
+window.onload=function(){
+    //获取手机分辨率宽度
+    var fontPer=parseFloat((document.body.clientWidth*0.625)/320*100)+'%';
+    document.getElementsByTagName('html')[0].style.fontSize=fontPer;
+}
+</script>
+</head>
+<body style="padding-top:44px;">
+<header class="header fixed bar">
+    <div class="ui basic borderless back left floated button"><i class="angle left icon"></i></div>
+    <div class="ui t14"><span>木头人</span></div>
+</header>
+<!--//End--header-->
+
+<article class="my_page">
+    <div class="ui divided list">
+        <div class="item">
+            <a href="">
+
+                <span class="content aligned">头像</span>
+                <i class="angle right floated icon"></i>
+                <span class="right floated"><img class="ui avatar image" width="39" height="39" src="../scripts/upload/img1.jpg"></span>
+            </a>
+        </div>
+        <!--//ENd--头像-->
+    </div>
+    <!--//ENd--divided-->
+    <div class="ui divided list">
+        <div class="item">
+            <a href="">
+                <span class="content aligned">昵称</span>
+                <i class="angle right floated icon"></i>
+                <span class="right floated">木头人</span>
+            </a>
+        </div>
+         <!--//End--昵称-->
+        <div class="item">
+            <a href="">
+                <span class="content aligned">账号</span>
+                <i class="angle right floated icon"></i>
+                <span class="right floated">15110008479</span>
+            </a>
+        </div>
+         <!--//End--账号-->
+        <div class="item">
+            <a href="">
+                <span class="content aligned">个性签名</span>
+                <i class="angle right floated icon"></i>
+            </a>
+        </div>
+        <!--//End--个性签名-->
+        <div class="item">
+            <a href="">
+                <span class="content aligned">性别</span>
+                <i class="angle right floated icon"></i>
+                <span class="right floated">女</span>
+            </a>
+        </div>
+        <!--//End--性别-->
+    </div>
+    <!--//ENd--divided-->
+    <div class="ui divided list">
+        <div class="item">
+            <a href="">
+                <span class="content aligned">收货地址</span>
+                <i class="angle right floated icon"></i>
+            </a>
+        </div>
+    </div>
+    <!--//ENd--divided-->
+
+</article>
+
+</body>
+</html>

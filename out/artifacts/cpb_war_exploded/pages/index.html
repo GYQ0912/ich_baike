@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link href="../scripts/lib/semantic/semantic.min.css" rel="stylesheet" >
+    <link href="../css/common.css" rel="stylesheet" >
+
+    <title>融艺投</title>
+    <style>
+         .author.button {
+             margin-top: -20px;
+             color: #000;
+         }
+        .ui.basic.heart.button {
+        }
+
+        .top.right.financing {
+            position: absolute;
+            bottom:12px;
+            right: 12px;
+            font-size:14px;
+        }
+
+         .translateion {-webkit-animation: translation  @duration@s ease-in-out;}  @-webkit-keyframes translation{0%   { -webkit-transform: translate(0px, 0px); } 100% { -webkit-transform: translate(@distance@px, 0px); } }
+
+    </style>
+
+</head>
+<div class="ui top fixed title basic paddingless segment">
+    <div class="ui  secondary centered pointing menu">
+        <a class="active item">
+            融资
+        </a>
+        <a class="item">
+            创作
+        </a>
+        <a class="item">
+            拍卖
+        </a>
+    </div>
+
+</div>
+<div class="ui cards">
+    <!--<div class="ui card">-->
+        <!--<a class="image" href="#">-->
+            <!--<img src="http://rongyitou2.efeiyi.com/artwork/1470277134151" data-id="picture" class="data-item">-->
+        <!--</a>-->
+        <!--<div class="content">-->
+            <!--<a class="header" href="#">Steve Jobes</a>-->
+            <!--<div class="meta">-->
+                <!--<a>Last Seen 2 days ago</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<script type="text/x-dot-template" id="projectList">
+
+    {{  for(var i = 0 ; i<it.length ; i++){ }}
+    <div class="ui superposed card" id="{{=it[i].id}}">
+        <div class="image">
+            <img src="{{=it[i].picture}}">
+        </div>
+        <div class="superposed content">
+            <a class="header" href="#">{{=it[i].title}}</a>
+            <span class="meta">
+                {{=it[i].brief}}
+            </span>
+            <span class="meta">
+               ，融资 ￥{{=it[i].amountOfFinanced}}/{{=it[i].amountOfFinancing}}，剩余 3 天
+            </span>
+        </div>
+
+        <div class="content">
+
+            <img class="left floated  ui avatar image" src="{{=it[i].artist.picture}}">
+            <a class="header" href="artist2.html?id={{=it[i].artist.id}}">
+           {{=it[i].artist.fullName}}
+           </a>
+            <div class="meta">{{=getLabelbyId(it[i].artist.ichLevel)}}</div>
+            <div class="right floated author ui mini basic heart button">
+
+            {{ if(typeof it[i].praiseList != 'undefined') { }}
+                <i class="red  heart icon" id="{{=it[i].praiseList[0].id}}"></i>
+                {{ } else { }}
+                <i class="red empty heart icon"></i>
+                {{ } }}
+
+                {{=it[i].praiseCount}}
+            </div>
+        </div>
+     </div>
+
+    {{ } }}
+
+
+</script>
+<body>
+<script language="JavaScript" src="../scripts/js/jquery-3.1.0.min.js" ></script>
+<script language="JavaScript" src="../scripts/lib/semantic/semantic.min.js" ></script>
+<script language="JavaScript" src="../js/compenent/doT.min.js" ></script>
+<script language="JavaScript" src="../js/common/util.js" ></script>
+<script language="JavaScript" src="../js/common/system.js" ></script>
+
+<script language="JavaScript" src="../js/index.js"></script>
+<script language="JavaScript" src="../js/common/dictionary.js" ></script>
+</body>
+</html>

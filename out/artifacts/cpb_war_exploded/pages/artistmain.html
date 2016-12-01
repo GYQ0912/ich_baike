@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <title>艺术家主页</title>
+    <link href="../scripts/css/semantic.min.css" rel="stylesheet">
+    <link href="../scripts/css/layouts.css" rel="stylesheet">
+    <link href="../scripts/css/artist_main.css" rel="stylesheet">
+    <script>
+        window.onload=function(){
+            //获取手机分辨率宽度
+            var fontPer=parseFloat((document.body.clientWidth*0.625)/320*100)+'%';
+            console.log(document.body.clientWidth)
+            document.getElementsByTagName('html')[0].style.fontSize=fontPer;
+        }
+    </script>
+</head>
+<body>
+<header class="header fixed bar">
+    <div class="ui basic borderless back left floated button"><i class="angle left icon"></i></div>
+    <span class="ui header t14">孙天娇</span>
+    <div class="ui basic borderless green right floated button text t12">编辑</div>
+</header>
+<!--//End--header-->
+<article class="ui artistmain com-nav" style="margin-top: 44px;">
+    <div class="swiper-menu bor-top-eb bor-btm-eb">
+        <div class="item line">
+            <span class="active"><strong class="">首页</strong></span>
+            <span><strong class="">简介</strong></span>
+            <span><strong class="">作品</strong></span>
+            <span><strong class="">投过的</strong></span>
+        </div>
+    </div>
+    <div class="swiper-container swiper-container-horizontal swiper-container-autoheight">
+        <div class="swiper-wrapper">
+            <div name="主页" class="swiper-slide  swiper-slide-active">
+                <!--人物信息-->
+                <div class="bd my">
+                    <div class="h-box">
+                        <!--头像-->
+                        <div class="h-user artist">
+                            <span><img src="../scripts/upload/r3.png" alt=""></span>
+                        </div>
+                        <!--介绍-->
+                        <div class="h-title">
+                            <h2>孙天娇</h2>
+                            <h3>青年艺术家</h3>
+                        </div>
+                        <!--关注私信-->
+                        <div class="h-icons t16">
+                                  <span class="ui mini basic follow button">
+                                      <i class="green add user blank icon"></i>
+                                  </span>
+                                  <span class="ui mini basic button">
+                                      <i class="mail outline blank icon"></i>
+                                  </span>
+                        </div>
+                        <!--项目信息-->
+                        <div class="h-info mt7 c99">
+                            <!--金额-->
+                            <div class="bd t12 mt12 pl12 pr12">
+                                <div class="info-l fl t12"><span>¥5000</span><span>项目总金额 </span></div>
+                                <i class="dsi t12 info-icon"></i>
+                                <div class="info-r fr t12"><span class="num">300%<em class="dsi t12 top-icon"></em></span><span>拍卖溢价率</span></div>
+                            </div>
+                            <!--数目-->
+                            <div class="bd t12 mt12">
+                                <div class="info-l fl t12"> <span>51</span><span>件作品 </span></div>
+                                <i class="dsi t12 info-icon"></i>
+                                <div class="info-r fr t12"><span>2860</span><span>位粉丝</span></div>
+                            </div>
+                        </div>
+                        <!--//End-->
+                    </div>
+                </div>
+                <!-- 投资信息-->
+                <div class="bd lh-list" >
+                    <ul class="bd">
+                        <!--融资中-->
+                        <li>
+                            <!--内容-->
+                            <div class="h-txt">
+                                <h5 class="cff ">布上油画 · 初见</h5>
+                                <p class="cff t14">静寂迷人的夜空，是记忆深处最遥远和笃定的依恋是记忆深处最遥远和笃定的依恋</p>
+                            </div>
+                            <!--状态-->
+                            <div class="state">
+                                <!--融资-->
+                                <div class="line-g"></div>
+                                <p class="t11 cff fl">融资中&nbsp;<strong>¥500,000 </strong></p>
+                            </div>
+                            <!--作品-->
+                            <img src="../scripts/upload/img2.jpg"  class="bd" alt=""/>
+                        </li>
+                        <!--拍卖中-->
+                        <li>
+                            <!--内容-->
+                            <div class="h-txt">
+                                <h5 class="cff ">布上油画 · 旅途</h5>
+                                <p class="cff t14">背起行囊，来一场说走就走的旅行</p>
+                            </div>
+                            <!--状态-->
+                            <div class="state">
+                                <!--拍卖中-->
+                                <p class="t11 cff">拍卖中</p>
+                            </div>
+                            <!--作品-->
+                            <img src="../scripts/upload/img2.jpg"  class="bd" alt=""/>
+                        </li>
+                        <!--展示-->
+                        <li>
+                            <!--内容-->
+                            <div class="h-txt">
+                                <h5 class="cff ">布上油画 · 夜辉</h5>
+                                <p class="cff t14">浪卷光难掩，云流影自清</p>
+                            </div>
+                            <!--作品-->
+                            <img src="../scripts/upload/img2.jpg"  class="bd" alt=""/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div name="简介" class="swiper-slide  swiper-slide-next">
+                <!--人物信息-->
+                <div class="bd briefing  pl12 pr12 pt12">
+                    <!--头像-->
+                    <img class="bd" src="../scripts/upload/r2.jpg" alt="">
+                    <h5 class="bd t12 c00">孙天娇</h5>
+                    <!--副文本-->
+                    <div class="page bd"></div>
+                </div>
+            </div>
+            <div name="作品" class="swiper-slide  swiper-slide-next">
+                <!--作品-->
+                <div class="works pd12  mt12 ui small images">
+                    <a href=""><img src="../scripts/upload/img3.jpg"><h5 class="mtb10 tc t16 c00 fl wd">星空系列</h5><p class="tc t11 c99 fl wd">5件作品</p></a>
+                    <a href=""><img src="../scripts/upload/img4.jpg"><h5 class="mtb10 tc t16 c00 fl wd">星空系列</h5><p class="tc t11 c99 fl wd">5件作品</p></a>
+                    <a href=""><img src="../scripts/upload/img4.jpg"><h5 class="mtb10 tc t16 c00 fl wd">星空系列</h5><p class="tc t11 c99 fl wd">5件作品</p></a>
+                    <a href=""><img src="../scripts/upload/img3.jpg"><h5 class="mtb10 tc t16 c00 fl wd">星空系列</h5><p class="tc t11 c99 fl wd">5件作品</p></a>
+                </div>
+            </div>
+            <div name="投过的" class="swiper-slide  swiper-slide-next">
+                <ul class="bd formerly">
+                    <li>
+                        <!--作品信息-->
+                        <div class="bd img-works">
+                            <div class="txt-works">
+                                <h5 class="cff">国画 · 迷鹿</h5>
+                                <p class="t14 cff ">静寂迷人的夜空，是记忆深处最遥远和笃定的...</p>
+                            </div>
+                            <!-- 作品-->
+                            <div class="bg-mask"></div>
+                            <img class="bd " src="../scripts/upload/img3.jpg" alt="">
+                        </div>
+                        <!--人物和作品信息-->
+                        <div class="bd page-works pl12 pr12">
+                            <!--头像-->
+                            <div class="head v-head">
+                                <i class="v-icon"></i>
+                                <img src="../scripts/upload/r1.jpg" class="bd" alt="">
+                            </div>
+                            <!--信息-->
+                            <div class="page">
+                                <div class="bd name-page mb7">
+                                    <h5 class="t14 c00 fl mr9">赖宝莹</h5>
+                                    <span class="c66 t12 fl">青年艺术家</span>
+                                </div>
+                                <div class="bd num-page">
+                                    <span class="t11 c99 fl mr9"><strong>10</strong>件作品</span>
+                                    <span class="t11 c99 fl"><strong>416</strong>个粉丝</span>
+                                </div>
+                                <div class="bd date-page">
+                                    <div class="fl mr9 line">
+                                        <i class="icon fl"></i>
+                                        <div class="gross fl">
+                                            <div class="march" style="width: 30%"></div>
+                                            <p class="cff t11 line-10"><span class="">1,500</span>元/<span>5,000</span>元</p>
+                                        </div>
+                                    </div>
+                                    <div class="fl time">
+                                        <i class="icon fl"></i>
+                                        <p class="fl c99 t12 line-12"><span>1</span>天后截止</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--关注-->
+                            <div class="concern">
+                                <div class="ui mini basic follow button"><i class="empty heart icon t9"></i>101</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <!--作品信息-->
+                        <div class="bd img-works">
+                            <div class="txt-works">
+                                <h5 class="cff">国画 · 迷鹿</h5>
+                                <p class="t14 cff ">静寂迷人的夜空，是记忆深处最遥远和笃定的...</p>
+                            </div>
+                            <!-- 作品-->
+                            <div class="bg-mask"></div>
+                            <img class="bd " src="../scripts/upload/img3.jpg" alt="">
+                        </div>
+                        <!--人物和作品信息-->
+                        <div class="bd page-works pl12 pr12">
+                            <!--头像-->
+                            <div class="head v-head">
+                                <i class="v-icon"></i>
+                                <img src="../scripts/upload/r1.jpg" class="bd" alt="">
+                            </div>
+                            <!--信息-->
+                            <div class="page">
+                                <div class="bd name-page mb7">
+                                    <h5 class="t14 c00 fl mr9">赖宝莹</h5>
+                                    <span class="c66 t12 fl">青年艺术家</span>
+                                </div>
+                                <div class="bd num-page">
+                                    <span class="t11 c99 fl mr9"><strong>10</strong>件作品</span>
+                                    <span class="t11 c99 fl"><strong>416</strong>个粉丝</span>
+                                </div>
+                                <div class="bd date-page">
+                                    <div class="fl mr9 line">
+                                        <i class="icon fl"></i>
+                                        <div class="gross fl">
+                                            <div class="march" style="width: 30%"></div>
+                                            <p class="cff t11 line-10"><span class="">1,500</span>元/<span>5,000</span>元</p>
+                                        </div>
+                                    </div>
+                                    <div class="fl time">
+                                        <i class="icon fl"></i>
+                                        <p class="fl c99 t12 line-12"><span>1</span>天后截止</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--关注-->
+                            <div class="concern">
+                                <div class="ui mini basic follow button"><i class="empty heart icon t9"></i>101</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<script language="JavaScript" src="../scripts/js/jquery-3.1.0.min.js"></script>
+<script>
+    var swiperContainerOption={};
+</script>
+<script language="JavaScript" src="../scripts/js/system.js"></script>
+
+
+</body>
+</html>

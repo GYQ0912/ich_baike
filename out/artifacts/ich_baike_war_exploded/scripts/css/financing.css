@@ -1,0 +1,78 @@
+/*.details-rz{padding-bottom: 43px}*/
+.details-rz .project .users{position: relative}
+.details-rz .project .users dt{position: absolute;top:15px;left:0;z-index:2}
+.details-rz .project .users dt .active{color:#cd3738!important;background: #fff!important;box-shadow:0 0 0 1px rgba(34,36,38,.15) inset!important;}
+.details-rz .project .users dd {width:100%;position:relative;padding-left:6.4rem;z-index:1;}
+.details-rz .project .users dd a {width:21px;height:21px;line-height:23px;text-align:center;float: left;}
+.details-rz .project .users dd a.item{margin:0 3px;-webkit-border-radius:50px;border-radius:50px;overflow:hidden}
+.details-rz .project .users dd a.more{width:21px;height:21px;position: absolute;top:0;right:0;color:#e1e1e1;font-size:20px}
+/*--//End--users--*/
+.details-rz .project .arts {font-size:8px;margin-top:7px;padding:10px 12px;border-top: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb}
+.details-rz .project .arts .content {width:100%;height:35px;padding-left:43px;float: left;position: relative}
+.details-rz .project .arts .content .thumb {position: absolute;top:0;left:0;}
+.details-rz .project .arts .content .info p{margin-top:7px}
+.details-rz .project .arts .content .info p span {height:10px;line-height:10px;float: left;margin-right:6px}
+/*--//End--arts--*/
+.details-rz .project .infobase {padding-left: 12px;padding-right: 12px;border-bottom: 1px solid #ebebeb}
+/*--//End--baseInfo--*/
+.details-rz .project .invest{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 12px;
+    padding-right:12px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+.details-rz .project .invest .dt{display: flex;padding:25px 26px 15px 26px;}
+.details-rz .project .invest .dt .items {flex: 1;text-align: center}
+.details-rz .project .invest .dt .items .circle {width:30px;height:30px;border:2px solid #e5e5e5;-webkit-border-radius:60px;border-radius:60px;display:inline-block;position:relative}
+.details-rz .project .invest .dt .items .circle:before,
+.details-rz .project .invest .dt .items .circle:after{content: '';position: absolute;left:50%;margin-left:-1px;background: #d9d9d9}
+.details-rz .project .invest .dt .items .circle:before{width:8px;height:2px;top:50%}
+.details-rz .project .invest .dt .items .circle:after{width:2px;height:10px;top:5px}
+.details-rz .project .invest .dt .items p:nth-of-type(2){height:10px;line-height:10px;margin-top: 14px}
+/*--//End--invest--*/
+.details-rz .project .discuss { padding-left: 12px;padding-right:12px;border-top: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb;}
+.details-rz .project .discuss .textarea{margin-top:11px;position:relative;height:92px;}
+.details-rz .project .discuss .textarea textarea{resize:none;outline:none;height:100%;padding:16px 13px;background:#fafafa}
+.details-rz .project .discuss .textarea .btn{position:absolute;right:6px;bottom:6px;width:52px;height:22px;line-height:20px;background:#000;color:#fff;text-align:center;
+    border: 0;}
+.details-rz .project .discuss .items{padding-bottom:11px}
+.details-rz .project .discuss .items li{padding-left:34px;width:100%;float:left;margin-top:25px;margin-bottom:5px;position:relative}
+.details-rz .project .discuss .items li img{position:absolute;left:0;top:0;width:25px;height:25px;border-radius:25px;}
+.details-rz .project .discuss .items li h5{height:11px;line-height:11px;margin-top:3px}
+.details-rz .project .discuss .items li h6{height:7px;line-height:7px;margin-top:6px;margin-bottom:15px}
+.details-rz .project .discuss .items li .answer {height:11px;line-height:11px}
+/*--//End--融资详情评论模块--*/
+.details-rz .project .invest-flow {padding-left: 12px;padding-right:12px;border-top: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb;}
+.details-rz .project .invest-flow .title {position:relative}
+.details-rz .project .invest-flow .title h5{margin:15px 0;color:#000;width:100%;float:left}
+.details-rz .project .invest-flow .title .btn {width:16px;height:16px;position: absolute;top:50%;right:0;margin-top:-8px;}
+.details-rz .project .invest-flow .content .info {padding:15px 0}
+.details-rz .project .invest-flow .content .info p{width:100%;line-height:21px;float: left;margin:6px 0;position: relative}
+.details-rz .project .invest-flow .content .info p.num{padding-left:12px;}
+.details-rz .project .invest-flow .content .info .num em{position: absolute;top:0;left:0;font-style: normal}
+/*--//End--融资详情流程模块--*/
+.details-rz .details .main {padding-bottom: 10px}
+.details-rz .details .main .imgs img {margin-bottom:4px;}
+.details-rz .details .main .text {margin-top: 15px;}
+.details-rz .details .explain {padding-bottom: 10px}
+.details-rz .details .explain h5 {margin: 15px 0;color: #000;width: 100%;float: left}
+.details-rz .details .explain li {position: relative;padding-left:15px;line-height:21px;margin:6px 0}
+.details-rz .details .explain li em {position: absolute;top:0;left:0;font-style: normal}
+.details-rz .details .faq {padding-bottom:10px}
+.details-rz .details .faq h5 {margin: 15px 0;color: #000;width: 100%;float: left}
+.details-rz .details .faq li {position: relative;padding-left:22px;line-height:21px;margin:6px 0}
+.details-rz .details .faq li em {position: absolute;top:0;left:0;font-style: normal}
+.btm-fixed {width:100%;position: fixed;bottom:0;left:0}
+.bd-btn-cell {
+    width: 100%;
+    height: 43px;
+    line-height: 13px;
+    padding: 15px 0;
+    float: left;
+    text-align: center;
+    background: #ef5b70;
+    color: #fff;
+    font-size: 14px;
+}

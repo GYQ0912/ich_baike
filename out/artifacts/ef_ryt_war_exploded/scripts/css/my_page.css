@@ -1,0 +1,17 @@
+.my_page .icons-order {background:url(../images/icons-order.png) no-repeat;-webkit-background-size:25px auto;background-size:25px auto;display:inline-block;width: 25px;height:25px;margin-top:10px;vertical-align:top;margin-right:10px}
+.my_page .icon-home {background-position:0 0}
+.my_page .icon-money {background-position:0 -30px}
+.my_page .icon-order {background-position:0 -60px}
+.my_page .icon-feedback {background-position:0 -90px}
+.my_page .icon-setup {background-position:0 -120px}
+.my_page .divided {border-top:1px solid #ebebeb!important;border-bottom:1px solid #ebebeb!important;margin:7px 0 0 0!important;}
+.my_page .divided .item {background: #fff;line-height:46px;padding:0 0 0 12px;border-top:0!important;}
+.my_page .divided .item a {width:100%;float: left;border-top: 1px solid #ebebeb;font-size: 12px;color:#000}
+.my_page .divided .item a .angle{margin-right: 8px;margin-left: 0;}
+.my_page .divided .item a .angle:before{font-size:20px;color: #dedede;}
+.my_page .divided .item img {width:39px;height:39px;position: relative;margin-right: 0}
+.my_page .divided .item .right {color:#999;margin-right: 7px;}
+.my_page .divided .item .right img {-webkit-border-radius:5px;border-radius:5px;margin-top:-2px;}
+.my_page .divided .item:nth-child(1) a{border-top: 0!important;}
+.my_page .divided:nth-child(1) .item:nth-child(1){line-height:61px;}
+

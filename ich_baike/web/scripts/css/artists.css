@@ -1,0 +1,108 @@
+.com-nav {width: 100%;float: left;font-size: 15px;}
+.com-nav .swiper-menu{height: 44px;line-height: 44px;margin-top: -1px;background: #fff;}
+.com-nav .swiper-menu .item.line span{padding: 0 20px;width: 25%;font-size: 13px;float: left}
+.com-nav .swiper-menu .item.line span.active:after{content: "";width: auto;height: auto;border-bottom: 0;position: inherit}
+.com-nav .swiper-menu .item.line span strong{width: 100%;float:left;position: relative;font-weight: 200}
+.com-nav .swiper-menu .item.line span.active strong::before{content: '';width:100%;height:2px;position: absolute;bottom:1px;left:0;border-bottom: 2px solid #000}
+/*--//End--Tab--*/
+.artistmain{margin-top: -1px;}
+.artistmain.ui .pd12{padding: 0 12px;}
+.artistmain.ui .wd{width: 100%}
+.artistmain.ui .mtb10{margin: 10px 0}
+.artistmain.ui .images.works img{width:100%;float: left}
+.artistmain.ui .images.works a{width: 48%;float: left;margin-bottom: 20px;}
+.artistmain.ui .images.works a:nth-child(2n){float: right}
+.artistmain.ui .images.works img{width: 100%;margin: 0}
+.artistmain.ui .images.works img:nth-child(2n){float: right}
+/*.artistmain  -----主页作品----*/
+.artistmain.ui .basic.borderless.button, .ui.basic.borderless.button:hover {border-width: 0px!important;box-shadow: none !important;background: #fff;padding: 11px 12px;}
+.artistmain.ui .borderless.segment, .ui.borderless.button, .ui.borderless.button:hover {border-width: 0px!important;box-shadow: none!important;  }
+.artistmain.ui .basic.borderless.button > .icon {font-size: 18px;}
+.artistmain.ui .basic.green.button {color: rgb(50, 149, 95)!important;}
+.artistmain.ui .secondary.pointing.menu {font-size: 14px;margin-top: 0px;border-bottom-width: 1px;font-family: "Microsoft YaHei";}
+.artistmain.ui .secondary.pointing.menu > .item {padding: 9px 16px;margin: 0px calc(12.5% - 34px);color: #888}
+.artistmain.ui .collected.segment {margin: 54px 0px 40px 0;text-align: center;padding: 0px;}
+.artistmain.ui .collected.segment > * {margin: 20px auto;}
+.artistmain.ui .segment h4{margin: 18px 0 12px 0!important;}
+.artistmain.ui .button {margin: 0px 5px;}
+.artistmain.ui .button > .blank.icon {margin-right: 0px;}
+.artistmain.ui .description {font-size: 12px;color: #888;}
+.artistmain.ui .description span:after {content: '|';margin-right: 10px;margin-left: 10px;font-size: 8px;}
+.artistmain.ui .description > span:last-child:after {content: '';}
+.artistmain.ui .description.grid > .column:not(.row) {padding-top: 0px;padding-bottom: 0px;margin-top: 8px;margin-bottom: 8px;line-height: 1em;}
+.artistmain.ui .two.grid > .column:nth-child(odd) {border-right: solid #ccc 1px;}
+.artistmain.ui .full.image, .ui.items > .item > .full.image, .ui.items > .item > .full.image > img {width: 100% !important;}
+.artistmain.ui .items > .item {margin-top: 18px;}
+.artistmain.ui .superposed.item {position: relative;}
+.artistmain.ui .superposed.item > .superposed.content {position: absolute;bottom: 0;padding: 1em !important;color: #fff;left: 0px;}
+.artistmain.ui .superposed.item > .superposed.content > * {color: #fff !important;}
+.artistmain.ui .collected .financial .column{width: 43%}
+/*.artistmain  -----主页首页----*/
+.artistmain.ui .briefing h5{margin: 25px 0}
+/*.artistmain  -----主页简介----*/
+.artistmain.ui .longhair{position: relative}
+.artistmain.ui .longhair .lh-txt h5,.longhair .lh-txt p,.lh-list li,.works li a,.formerly li{width:100%;float: left}
+.artistmain.ui .longhair .lh-head,.longhair .lh-txt,.formerly li .img-works .txt-works,.formerly li .page-works .page .date-page .gross p,.formerly li .page-works .head.v-head .v-icon{z-index:2}
+.artistmain.ui .longhair .lh-bg,.longhair .lh-txt,.longhair .lh-head,.formerly li .page-works .page .date-page .gross p{position: absolute;left: 0}
+.artistmain.ui .longhair .lh-head{width: 100%}
+.artistmain.ui .longhair .lh-head .retreat,.longhair .lh-head .share{margin: 21px 0;width: 20px;height: 20px;background: url("../images/longhair1.png") no-repeat;background-size: 20px auto}
+.artistmain.ui .longhair .lh-head .retreat{float: left;background-position: 0 -28px;margin-left: 18px;}
+.artistmain.ui .longhair .lh-head .share{float: right;background-position: 0 1px;margin-right: 18px;}
+.artistmain.ui .longhair .lh-bg{width: 100%;height: 100%;top: 0;background: rgba(0,0,0,0.5);z-index: 1}
+.artistmain.ui .longhair .lh-txt{width: 100%;text-align: center;top: 33.55rem;}
+.artistmain.ui .longhair .lh-txt h5{font-size: 45px;color: #fff;font-weight: 400;letter-spacing:2px;margin: 0}
+.artistmain.ui .longhair .lh-txt p{margin-top: 21px;}
+/*.artistmain  -----主页----*/
+.artistmain.ui .my .h-box{width:100%;float:left;margin-bottom:45px}
+.artistmain.ui .my .h-box .h-user{width:100%;float:left;margin:40px 0 25px 0 ;text-align:center;}
+.artistmain.ui .my .h-box .h-user img{width:100px;height:100px;-webkit-border-radius:100px;border-radius:100px}
+.artistmain.ui .my .h-box .h-user span{position: relative;display: inline-block;width: 100px;height: 100px;}
+.artistmain.ui .my .h-box .h-user.artist span:after{content: '';background: url("../images/longhair1.png") no-repeat 0 -61px;width: 21px;height: 21px;position: absolute;right: 0;bottom: 0;background-size: 21px auto;}
+.artistmain.ui .my .h-box .h-user span p{color:#666;font-size:12px;line-height:20px}
+.artistmain.ui .my .h-box .h-user span p:first-child{margin-top:18px}
+.artistmain.ui .my .h-box .h-user span:nth-of-type(1) p{width:80px;float:right}
+.artistmain.ui .my .h-box .h-user span:nth-of-type(3) p{width:80px;float:left}
+.artistmain.ui .my .h-box .h-title{width:100%;float:left;text-align:center;}
+.artistmain.ui .my .h-box .h-title h2{font-size:21px;font-weight:400;color: #000}
+.artistmain.ui .my .h-box .h-title h3{font-size:14px;color:#999;font-weight:400;margin-top:11px}
+.artistmain.ui .my .h-box .h-icons{width:100%;float:left;margin-top:17px;text-align:center}
+.artistmain.ui .my .h-box .h-icons a{display:inline-block;margin:0 10px}
+.artistmain.ui .my .h-box .h-icons .nop{position: static}
+.artistmain.ui .my .h-box .h-info{width:100%;float:left;text-align:center}
+.artistmain.ui .my .h-box .h-info .dsi{display: inline-block}
+.artistmain.ui .my .h-box .h-info .info-l{text-align: right;width: 46%}
+.artistmain.ui .my .h-box .h-info .info-r{text-align: left;width: 46%}
+.artistmain.ui .my .h-box .h-info .info-icon{background: url("../images/longhair1.png") no-repeat 0 -87px;width: 4px;height: 8px;background-size: 19px auto;margin: 0 8px}
+.artistmain.ui .my .h-box .h-info .top-icon{background: url("../images/longhair1.png") no-repeat 0 -89px;width: 6px;height: 10px;background-size: 16px auto;margin: 0 3px}
+.artistmain.ui .my .h-box .h-info .num{color: #e83f55;}
+/*.artistmain  -----主页首页----*/
+.artistmain.ui .lh-list li{font-size: 15px;position: relative;margin-bottom: 25px;}
+.artistmain.ui .lh-list li .h-txt{position: absolute;bottom: 16px;left: 12px;width: 62%}
+.artistmain.ui .lh-list li .h-txt h5{font-size: 19px;line-height: 19px;margin-bottom: 16px;}
+.artistmain.ui .lh-list li .h-txt p{line-height: 18px;}
+.artistmain.ui .lh-list li .state{position: absolute;right: 0;bottom: 19px;width: 90px;height: 27px;background: rgba(0,0,0,0.3);line-height: 27px;text-align: center}
+.artistmain.ui .lh-list li .state .line-g{width: 30%;height: 27px;z-index: 3;left: 0;top:0;background: #4fb641;position: absolute;opacity: 0.5}
+.artistmain.ui .lh-list li .state p{line-height: 27px;}
+/*--//End--流程信息--*/
+.artistmain.ui .formerly li{margin-bottom: 25px;}
+.artistmain.ui .formerly li .img-works,.formerly li {position: relative;}
+.artistmain.ui .formerly li .img-works .txt-works{position: absolute;bottom: 29px;left: 12px;}
+.artistmain.ui .formerly li .img-works .txt-works h5{margin-bottom: 10px;font-size: 20px;line-height: 20px;}
+.artistmain.ui .formerly li .bg-mask{background: rgba(0,0,0,0.5);position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 1}
+.artistmain.ui .formerly li .page-works{position: relative;}
+.artistmain.ui .formerly li .page-works .head{position: absolute;left: 15px;width: 35px;height: 35px;top: 15px;}
+.artistmain.ui .formerly li .page-works .head img{border-radius: 23px}
+.artistmain.ui .formerly li .page-works .head.v-head .v-icon{background: url("../images/icons.png") no-repeat -21px -53px;width: 12px;height: 12px;background-size: 56px auto;position: absolute;right: 0;bottom: 0}
+.artistmain.ui .formerly li .page-works .page{padding-left: 60px;}
+.artistmain.ui .formerly li .page-works .page .name-page{margin-top: 15px;}
+.artistmain.ui .formerly li .page-works .page .num-page{margin-bottom: 10px;}
+.artistmain.ui .formerly li .page-works .page .date-page .gross{width: 100px;height: 16px;background: #d9d9d9;line-height: 16px;position: relative;}
+.artistmain.ui .formerly li .page-works .page .date-page .gross .march{position: absolute;left: 0;top:0;background: #4fb641;height: 16px;}
+.artistmain.ui .formerly li .page-works .page .date-page .icon{background: url("../images/icons.png") no-repeat ;background-size:91px auto;width:14px;height: 14px;margin: 1px 3px 1px 0}
+.artistmain.ui .formerly li .page-works .page .date-page .line .icon{background-position: -66px 0px}
+.artistmain.ui .formerly li .page-works .page .date-page .time .icon{background-position: -66px -26px;}
+.formerly li .page-works .page .date-page .gross p{padding: 3px 0}
+.artistmain.ui .formerly li .page-works .concern{position: absolute;right: 12px;top: 15px;}
+
+
+

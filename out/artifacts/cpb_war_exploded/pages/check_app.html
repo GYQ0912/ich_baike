@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>诚品宝</title>
+    <style>
+        body {
+            background:url("../images/index.png") no-repeat;width:100%;height:auto;background-size:cover;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script language="JavaScript" src="../scripts/js/jquery-3.1.0.min.js"></script>
+<script>
+    //手机会打开check_app.html网页，这个页面会自动打开app，如果没有app,3s后会跳到下载页面去。
+    //实际上就是新建一个iframe的生成器
+    var  createIframe=(function(){
+        var iframe;
+        return function(){
+            if(iframe){
+                return iframe;
+            }else{
+                iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                return iframe;
+            }
+        }
+    })();
+
+    var openIframe=createIframe();
+    openIframe.src = 'cundong://splash';
+
+    setTimeout(function () {
+        window.location.href = 'download_app.html';
+    }, 500);
+
+</script>
+</html>
