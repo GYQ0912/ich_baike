@@ -7,7 +7,7 @@ public class Constants {
     // 模板path
     public static final String TEMPLATE_PATH = "D:/IdeaProjects/baike/ich_baike/web/WEB-INF/templates/";
     // 模板文件格式
-    public static final String TEMPLATE_FORMAT = ".html";
+    public static final String TEMPLATE_FORMAT = ".ftl";
     // 生成html的应用path
     public static final String CREATE_HTML_PATH = "D:/IdeaProjects/baike/ich_baike/web/pages/";
     // 生成文件格式

@@ -337,6 +337,9 @@ public class Util {
     }
 
     public static String baseTypeToString(Object obj) {
+        if(obj == null) {
+            return null;
+        }
         if(!isBaseType(obj.getClass())) {
             return  null;
         }

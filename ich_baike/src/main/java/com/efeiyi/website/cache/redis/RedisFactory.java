@@ -29,8 +29,7 @@ public class RedisFactory {
     }
 
     private RedisFactory() throws Exception {
-        //initJedisPool();
-        initJedisCluster();
+        initJedisPool();
     }
 
     //@TODO 待深入测试

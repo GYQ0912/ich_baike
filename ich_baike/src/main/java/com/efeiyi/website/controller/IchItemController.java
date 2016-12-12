@@ -1,7 +1,9 @@
 package com.efeiyi.website.controller;
 
 import com.efeiyi.website.entity.IchItem;
+import com.efeiyi.website.service.IchItemService;
 import com.efeiyi.website.util.FreeMarker;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 @RequestMapping("ichItem")
 public class IchItemController extends BaseController {
+
+    @Autowired
+    IchItemService ichItemService;
 
     @RequestMapping("testFreeMarker")
     public void testFreeMarker(HttpServletRequest request, HttpServletResponse response) {
@@ -31,4 +36,5 @@ public class IchItemController extends BaseController {
         }
         responseSuccess(request, response);
     }
+
 }

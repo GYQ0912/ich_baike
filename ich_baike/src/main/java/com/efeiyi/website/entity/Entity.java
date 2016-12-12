@@ -30,6 +30,9 @@ public abstract class Entity {
             Method fieldMethod = getClass().getMethod(getMethodName);
             Object object = fieldMethod.invoke(this);
             String s = Util.baseTypeToString(object);
+            if(s == null) {
+                continue;
+            }
             map.put(fieldName, s);
         }
         return map;
