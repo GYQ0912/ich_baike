@@ -3,11 +3,18 @@ package com.efeiyi.website.controller;
 import com.efeiyi.website.entity.IchItem;
 import com.efeiyi.website.service.IchItemService;
 import com.efeiyi.website.util.FreeMarker;
+import com.efeiyi.website.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 /**
  * Created by Administrator on 2016/12/1.
@@ -31,6 +38,18 @@ public class IchItemController extends BaseController {
         FreeMarker freeMarker = new FreeMarker(request);
         try {
             freeMarker.createHtml(ichItem, "ichItem", "template");
+        } catch (Exception e) {
+            return;
+        }
+        responseSuccess(request, response);
+    }
+
+    @RequestMapping(value = "uploadFile", method = RequestMethod.POST)
+    @ResponseBody
+    public void uploadFile(@RequestParam(value="file")MultipartFile[] files,
+                           HttpServletRequest request, HttpServletResponse response) {
+        try {
+            Util.uploadFile(files, request);
         } catch (Exception e) {
             e.printStackTrace();
         }

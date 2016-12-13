@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>首页</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/ajaxfileupload.js"></script>
 </head>
 <body>
-非遗百科首页
+<div>非遗百科首页</div>
+<div><input type="file" name="file" id="file" multiple style="width:69px;"/></div>
+<div id="img_block"></div>
+<div><input type="button" value="上传" id="uploadFile"/></div>
 </body>
+<script>
+    var action = '../ichItem/uploadFile';
+    var files = null;
+
+    $('#uploadFile').on('click',function(){
+        if(files == null || files.length <= 0) {
+            alert('请选择文件');
+            return;
+        }
+
+        jQuery.ajaxFileUpload({
+            url : action,
+            secureuri : false,
+            fileElementId : 'file',
+            dataType: 'json',
+            success : function(data) {
+                var data = data;
+            },
+            error : function(e) {
+                alert(e.responseText);
+            }
+        });
+    });
+    
+    $('#file').on('change', function (e) {
+        var curr_input = e.currentTarget;
+        files = $(curr_input)[0].files;
+        for(var i = 0; i < files.length; i ++) {
+            var file = files[i];
+            var src = window.URL.createObjectURL(file);
+            var $img = $('<img/>');
+            $img.attr('src', src);
+            $img.width('100px');
+            $img.height('100px');
+            $('#img_block').append($img);
+        }
+    });
+
+</script>
 </html>

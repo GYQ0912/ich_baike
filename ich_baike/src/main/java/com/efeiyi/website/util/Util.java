@@ -1,6 +1,7 @@
 package com.efeiyi.website.util;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
 import java.math.BigDecimal;
@@ -11,15 +12,21 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
+import com.efeiyi.website.entity.User;
 import org.apache.commons.beanutils.converters.ShortConverter;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.lang.time.DateFormatUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.multipart.MultipartFile;
 
 
 public class Util {
@@ -399,6 +406,24 @@ public class Util {
         } else {
             log.debug("刪除文件成功");
             return true;
+        }
+    }
+
+    public static void uploadFile(MultipartFile[] files, HttpServletRequest request) throws Exception {
+        for(MultipartFile multipartFile : files) {
+            String filename = multipartFile.getOriginalFilename();
+
+            String suffix = filename.substring(filename.lastIndexOf("."));
+
+            filename = getUUId() + suffix;
+
+            File destFile = new File(request.getServletContext().getRealPath("/") +
+                    "upload/", filename);
+            if (!destFile.getParentFile().exists()) {
+                destFile.getParentFile().mkdirs();
+            }
+
+            multipartFile.transferTo(destFile);
         }
     }
 
