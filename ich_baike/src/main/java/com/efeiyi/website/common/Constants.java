@@ -19,4 +19,8 @@ public class Constants {
     //UTF-8编码
     public static final String ENCODE = "UTF-8";
 
+    public static final String OSS_EF_WIKI_HOST = "http://wiki-oss.efeiyi.com/";
+    public static final String accessKeyId = "maTnALCpSvWjxyAy";
+    public static final String accessKeySecret = "0Ou6P67WhuSHESKrwJClFqCKo5BuBf";
+
 }

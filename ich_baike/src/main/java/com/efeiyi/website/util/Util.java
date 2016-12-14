@@ -1,26 +1,10 @@
 package com.efeiyi.website.util;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Type;
-import java.math.BigDecimal;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-
-import com.efeiyi.website.entity.User;
-import org.apache.commons.beanutils.converters.ShortConverter;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import com.aliyun.openservices.oss.OSSClient;
+import com.aliyun.openservices.oss.model.CannedAccessControlList;
+import com.aliyun.openservices.oss.model.ObjectMetadata;
+import com.aliyun.openservices.oss.model.PutObjectResult;
+import com.efeiyi.website.common.Constants;
 import org.apache.commons.lang.time.DateFormatUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +12,21 @@ import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class Util {
     private static Logger log;
@@ -409,22 +408,58 @@ public class Util {
         }
     }
 
-    public static void uploadFile(MultipartFile[] files, HttpServletRequest request) throws Exception {
+    public static String uploadImage(MultipartFile file) throws Exception {
+        String filename = file.getOriginalFilename();
+
+        String suffix = filename.substring(filename.lastIndexOf("."));
+
+        String tmpUrl = "image/" + System.currentTimeMillis() + "" + (int) (Math.random() * 1000000) + suffix;
+
+        uploadFile(file, "ef-wiki", tmpUrl);
+
+        return Constants.OSS_EF_WIKI_HOST + tmpUrl;
+    }
+
+    public static List<String> uploadImage(MultipartFile[] files) throws Exception {
+        List<String> urlList = new ArrayList<>();
+
         for(MultipartFile multipartFile : files) {
-            String filename = multipartFile.getOriginalFilename();
-
-            String suffix = filename.substring(filename.lastIndexOf("."));
-
-            filename = getUUId() + suffix;
-
-            File destFile = new File(request.getServletContext().getRealPath("/") +
-                    "upload/", filename);
-            if (!destFile.getParentFile().exists()) {
-                destFile.getParentFile().mkdirs();
-            }
-
-            multipartFile.transferTo(destFile);
+            String tmpUrl = uploadImage(multipartFile);
+            urlList.add(tmpUrl);
         }
+
+        return urlList;
+    }
+
+    public static Boolean uploadFile(MultipartFile multipartFile, String bucketName, String uploadName) throws IOException {
+        OSSClient client = new OSSClient("http://oss-cn-beijing.aliyuncs.com", Constants.accessKeyId, Constants.accessKeySecret);
+
+        // 获取Bucket的存在信息
+        boolean exists = client.doesBucketExist(bucketName);
+        if (!exists) {
+            // 新建一个Bucket
+            client.createBucket(bucketName);
+            //CannedAccessControlList是枚举类型，包含三个值： Private 、 PublicRead 、 PublicReadWrite
+            client.setBucketAcl(bucketName, CannedAccessControlList.PublicReadWrite);
+        }
+
+        // 获取指定文件的输入流
+        // File file = new File(filePath);
+        InputStream content = multipartFile.getInputStream();
+
+        // 创建上传Object的Metadata
+        ObjectMetadata meta = new ObjectMetadata();
+
+        // 必须设置ContentLength
+        meta.setContentLength(multipartFile.getSize());
+
+        // 上传Object.
+        PutObjectResult result = client.putObject(bucketName, uploadName, content, meta);
+
+        // 打印ETag
+        System.out.println(result.getETag());
+
+        return true;
     }
 
 }
